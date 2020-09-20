@@ -2,3 +2,6 @@
 2. ![blaster worm propagation](https://github.com/anindameister/security/blob/master/snaps/2.PNG)
 3. ![blaster worm propagation hand written](https://github.com/anindameister/security/blob/master/snaps/3.jpeg)
 4. paper https://github.com/anindameister/security/blob/master/IEEE_Security_Privacy_Blaster_Final.pdf
+5. unix commands
+
+- pwd : (present working directory) to see what your home directory is 
