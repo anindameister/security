@@ -41,6 +41,8 @@
 
 - mkdir folderName=linux and the same in windows to create a folder
 - to create a file in linux: touch fileName.txt whereas in windows type nul > filename.txt
+- again remeber this type nul > your_file.txt
+- the url for the above: https://stackoverflow.com/questions/30011267/windows-equivalent-of-touch-i-e-the-node-js-way-to-create-an-index-html
 
 5. ll -a : to list all the contents with details
 
@@ -130,6 +132,35 @@ source: https://devconnected.com/how-to-copy-directory-on-linux/#:~:text=In%20or
 #### What Causes the You do not have Permission to View this Object’s Security Properties Error?
 
 - Some other program or service is using your file or folder simultaneously, preventing you from editing its permission settings. If this is the case, a simple restart should be more than enough to solve the problem.
+
+- Removing contd..
+
+- rm -r newfoler2 is in regards to delete the complete folder including the contents
+
+- rm newfile is in regards to getting into a folder and removing the particular file
+
+- rm newfolder/.hidden*  is in regards to staying outside the folder named newfolder and deleting all the contents whose name starts with .hidden
+
+- rm newfolder/new*  is in regards to staying outside the folder named newfolder and deleting all the contents whose name starts with new
+
+![removing all](https://github.com/anindameister/security/blob/master/snaps/22.PNG)
+
+10. displaying the contents of a particular file: cat (concatenate) command
+
+- url for all cat commands : https://www.geeksforgeeks.org/cat-command-in-linux-with-examples/
+
+![displaying the contents of a particular file](https://github.com/anindameister/security/blob/master/snaps/24.PNG)
+
+- cat particularFile.txt  :make sure to give the extension or else it wouldn't work
+
+![displaying the contents of a particular file](https://github.com/anindameister/security/blob/master/snaps/23.PNG)
+
+11. Display text on the screen by using the echo command:
+- echo "hello world"
+
+![echo command](https://github.com/anindameister/security/blob/master/snaps/25.PNG)
+
+
 
 
 

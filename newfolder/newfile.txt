@@ -1,0 +1,5 @@
+Hello
+
+just wanna say that this file was opened from cmd by getting into the directory and typing newfile.txt
+
+the same thing wasn't possible from unix shell
