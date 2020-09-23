@@ -165,6 +165,8 @@ source: https://devconnected.com/how-to-copy-directory-on-linux/#:~:text=In%20or
 
 # class on 22 September, 2020
 
+- contains the part where ram memory mgmt has been explained  https://drive.google.com/file/d/1bhuGlI2fChvbgJ7yLhfiiieu7tAA1sCb/view?usp=sharing
+
 - disponsible- available
 - backup is not present in the same location as the data
 - In computer security, a DMZ or demilitarized zone (sometimes referred to as a perimeter network or screened subnet) 
