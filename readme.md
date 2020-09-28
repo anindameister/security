@@ -448,6 +448,16 @@ list
 - so if we now, change that to 508("a" character number of times), we're going 2 bytes further along, which means we're now overwriting the entirety of our return address.
 !["a" character number of times is 508](https://github.com/anindameister/security/blob/master/snaps/65.PNG)
 !["a" character number of times is 508 and overwriting the entirety of our return address](https://github.com/anindameister/security/blob/master/snaps/66.PNG)
+- so we're overwriting the "return address" with 41s. Now, if there were some virus code at 414141, that's a big problem. 
+- so we run this and now can see that the return address is now 0x414141
+![return address is now 0x414141](https://github.com/anindameister/security/blob/master/snaps/67.PNG)
+###### the register situation
+![the register situation](https://github.com/anindameister/security/blob/master/snaps/68.PNG)
+- we can now see that in the register, the instruction/construction pointer is now trying to point ot 0x414141 which means that it has read this return value and tried to return to that place in the code and run it, and ofcourse it can'take
+
+
+
+
 
 
 
