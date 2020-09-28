@@ -310,6 +310,91 @@ further 100-999 is assigned for administrative and system accounts or groups
 
 - some very acurate and fine details about stack is given below
 https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm
+- there's a very minimal difference between arraylist and linkedlist
+https://www.tutorialspoint.com/differences-between-arraylist-and-linkedlist-in-java#:~:text=LinkedList%20uses%20Doubly%20Linked%20List%20to%20store%20its%20elements.&text=ArrayList%20is%20slow%20as%20array,not%20much%20bit%20shifting%20required.&text=ArrayList%20implements%20only%20List.
+
+#### stack from the video contd..
+
+- let's consider that we have some programme that's calling a function.
+- A function is some area code that does something and then returns back to where it was before.
+
+![using the calling function](https://github.com/anindameister/security/blob/master/snaps/42.PNG)
+
+- when the calling function wants to make sure of something, it adds its parameters that it's passing onto the stack 
+
+![using the calling function](https://github.com/anindameister/security/blob/master/snaps/43.PNG)
+
+- so the parameter A and B are added onto the stack in reverse order
+
+![parameter A and B are added onto the stack in reverse order](https://github.com/anindameister/security/blob/master/snaps/44.PNG)
+
+![parameter are added onto the stack in reverse order](https://github.com/anindameister/security/blob/master/snaps/45.PNG)
+
+- And then the assembler code for this function will make something called a "call" and that would jump to somehwere else in the memory and work with these two things and it's the nature of this stack that causes us to have problems
+
+![assembly language](https://github.com/anindameister/security/blob/master/snaps/46.PNG)
+
+- let's look into some code and find out how it works
+
+```
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+	char buffer[500];
+	strcpy(buffer, argv[1]);
+	return 0;
+}
+
+```
+
+- the above C code allocates some memory on the stack and then copies a string into it from the command line
+
+- so in the C programme, we got the main function that takes the number of parameters given and a pointer to those variables that you've got 
+
+- pointers below
+https://www.javatpoint.com/c-pointers#:~:text=The%20pointer%20in%20C%20language,function%2C%20or%20any%20other%20pointer.&text=int*%20p%20%3D%20%26n%3B%20%2F%2F,variable%20n%20of%20type%20integer.
+- %d decimal output, %x hexadecimal output
+- pointer program, a general one , which is easier to understand is below
+![pointer programme example](https://github.com/anindameister/security/blob/master/snaps/47.PNG)
+
+#### stack, c program, pointer, video dude contd..
+
+- and they'll be help in the kernel area of our memory
+- we have allocated a buffer that's 500 character long and then we call a function called strcpy, which will copy our commandline parameter into argv into our buffer
+
+![buffer,strcpy](https://github.com/anindameister/security/blob/master/snaps/48.PNG)
+
+
+- our function puts on a return address which is replacing the code we need to go back to once we've done strcpy
+
+![return](https://github.com/anindameister/security/blob/master/snaps/49.PNG)
+
+- so that's how main knows where to go after it's finished
+- And then we have put on a reference to the base pointer in our previous function. It's not important to this video.
+
+![basePointer](https://github.com/anindameister/security/blob/master/snaps/50.PNG)
+- this is just going to be our EBP base pointer
+
+- the below is our allocated space for buffer and it's 500 long
+
+![our allocated space for buffer](https://github.com/anindameister/security/blob/master/snaps/51.PNG)
+
+![our allocated space for buffer](https://github.com/anindameister/security/blob/master/snaps/52.PNG)
+
+- if we write into it something that's longer than 500, we're going to to straight past the buffer,over this, and crucially over our return variable
+
+
+
+
+
+
+
+
+
+
+
 
 
 
