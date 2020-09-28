@@ -455,6 +455,62 @@ list
 ![the register situation](https://github.com/anindameister/security/blob/master/snaps/68.PNG)
 - we can now see that in the register, the instruction/construction pointer is now trying to point ot 0x414141 which means that it has read this return value and tried to return to that place in the code and run it, and ofcourse it can'take
 
+#### code broken, now what do we do
+
+- what we need to do is change this return value to somewhere where we've got some payload we're trying to give- we're trying to produce
+- let's quit the debugger and checkout the payload
+- this payload is a simple, very short programme in Assembler, that puts some variables on the stack and then executes the system call to tell it to run a shell- to run a new command line
+- our shell code, would depend on linux OS and not on the CPU type 
+![our shell code](https://github.com/anindameister/security/blob/master/snaps/69.PNG)
+- this is just a string of different commands. Crucially, this xcd\x80 is throwing a system interrupt, which means that it's going to run the system call.
+###### system interrupt
+![system interrupt](https://github.com/anindameister/security/blob/master/snaps/73.PNG)
+###### system call
+![system call](https://github.com/anindameister/security/blob/master/snaps/74.PNG)
+
+- what this will actually do is run something called ZSH, which is an old shell that doesn't have a lot of protections involved
+###### zsh
+![ZSH](https://github.com/anindameister/security/blob/master/snaps/70.PNG)
+###### shell scripting
+![shell scripting](https://github.com/anindameister/security/blob/master/snaps/71.PNG)
+
+###### contd....
+- let's go back to our debugger , gdb, and we're gonna run again but this time, a slightly more malicious code
+- \x41 * 508 and then putting our shell code
+![shell scripting](https://github.com/anindameister/security/blob/master/snaps/75.PNG)
+![shell scripting](https://github.com/anindameister/security/blob/master/snaps/76.PNG)
+- to craft an exploit from this, what we need to do is remember the fact that strcopy is going to copy into our buffer.
+- so we're gonna start at the beginning of buffer which is the point not facing base pointer
+![start at the beginning of buffer](https://github.com/anindameister/security/blob/master/snaps/77.PNG)
+
+- so we're gonna start at the beginning of the buffer. we want to overwrite the memory of the return address with somewhere pointing to our malicius code
+- now, we can't necessarily know for sure where our malicious code might be stored elsewhere on the disk, so we dont worry about that or memory
+- so we want to put it in this buffer. so we're going to put some maliciouscode in here and then we're going to have a return address that points back into it
+- Memory moves around slightly. When you run these programmes, things change slightly, environment variables are added or removed, things move around
+- so, we want to try and hedge our bets and get the rough area that this will go in
+###### No-Op sled
+![start at the beginning of buffer, No-Op sled](https://github.com/anindameister/security/blob/master/snaps/78.PNG)
+![No-Op sled](https://github.com/anindameister/security/blob/master/snaps/79.PNG)
+###### machine instruction for "just move to the next one"
+![No-Op sled](https://github.com/anindameister/security/blob/master/snaps/80.PNG)
+- anywhere we land in that No-Op is going to tick along to out malicious code
+- so we have a load of \x90s , then we have our shell code. That's our malicious payload that runs our shell
+- return address, right in the right place, that points back right smack in the middle of these \x90s
+![No-Op sled](https://github.com/anindameister/security/blob/master/snaps/81.PNG)
+- and what that means is, even if it moves a bit, it'll still work
+- just like having a slope almost
+![No-Op sled](https://github.com/anindameister/security/blob/master/snaps/82.PNG)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
