@@ -383,7 +383,84 @@ https://www.javatpoint.com/c-pointers#:~:text=The%20pointer%20in%20C%20language,
 
 ![our allocated space for buffer](https://github.com/anindameister/security/blob/master/snaps/52.PNG)
 
-- if we write into it something that's longer than 500, we're going to to straight past the buffer,over this, and crucially over our return variable
+- if we write into it something that's longer than 500, we're going to to straight past the buffer,over this(EBP base pointer), and crucially over our return variable
+
+- And that's where we point back to something we shouldn't be doing (Kali Linux Distribution)
+
+- we have a small function in the c program, that does our copy from the commandline. So compilation, done, and now running it with "Hello"
+- this will copy "hello" into this buffer and then simply return, so nothing happens.
+
+- putting the commandline parameter Hello while running the program
+![putting the commandline parameter Hello while running the program](https://github.com/anindameister/security/blob/master/snaps/53.PNG)
+
+###### basic programme
+- we can consider another program that can copy "Hello" into the buffer and process it; example make it all upper-case.
+- so we can get a function which makes it all, uppercase
+- so I can copy hello off, and then can change this newcopy to be all uppercase, and then you output it in the screen
+- and that doesn't even have to be main and it could be just any function
+
+##### GDB:- basic Linux commandline debugger
+- GDB not adviseable unless you really like seeing lots of Assembly and doing really low-level Linux things
+- so we go to the location and do GDB, this initiates GDB
+- type in 
+```
+list
+```
+- and it shows the code for our function. So we can see that it just compiled our function
+![programme from gdb](https://github.com/anindameister/security/blob/master/snaps/54.PNG)
+- now, it knows this because the compiler included this information along with the executable
+- we can also show the machine code for this so we can say "disas main"(in the gdb) disassemble main and we can see the code for main
+![disas main](https://github.com/anindameister/security/blob/master/snaps/55.PNG)
+- the above snap shows the actual cpu instructions that will be run
+- check Steve Bagley's video for Assembly
+- however, a couple of very important things are:
+- the line here sub of 0x1f4 from %esp, that's allocating 500 for the buffer
+![0x1f4 from %esp](https://github.com/anindameister/security/blob/master/snaps/56.PNG)
+- we're at the begining of the stack and from there we go 500 in the below direction and that's where our buffer goes
+###### starting from stack and going 500 units to buffer
+![starting from stack and going 500 units to buffer](https://github.com/anindameister/security/blob/master/snaps/57.PNG)
+- so the buffer sitting to the left of the image but is lower on memory than the rest of our variables
+
+- now, we can run this program from GDB and if it crashes then we can look at the registers and find out what's happened
+- we start like this, run Hello , so GDB starts the program and says Hello and it exited normally
+![GDB starts the program and says Hello](https://github.com/anindameister/security/blob/master/snaps/58.PNG)
+- now, we can pass something a little bit longer than Hello
+- If we pass something that's over 500, then this buffer will go over this base pointer and this return value, and break the code
+![method to go over the EDB and break the code](https://github.com/anindameister/security/blob/master/snaps/59.PNG)
+- It should just crash it. Python, for example, can produce strings based on simple scripts on the command line
+- we say, run and then pass it with Python script of print....41(that's the "a" character), let's say 506 times
+- python script to print the "a" character, 506 times
+![python script to print the "a" character, 506 times](https://github.com/anindameister/security/blob/master/snaps/60.PNG)
+- just a little bit more than 500 so that it is going to cause somewhat of a problem but not a catastrophe and then we run that, so it has received a segmentation fault
+![segmentation fault](https://github.com/anindameister/security/blob/master/snaps/61.PNG)
+
+- now the segmentation fault is something, what a Cpu will send back to you when you're trying to access something in memory you shouldn't be doing.
+###### stack situation at threshold which is 500
+![stack situation at threshold which is 500](https://github.com/anindameister/security/blob/master/snaps/62.PNG)
+###### stack situation at crossover of the threshold which is 500 and reaching 506
+![stack situation](https://github.com/anindameister/security/blob/master/snaps/63.PNG)
+- Again the segmentation fault is something, what a Cpu will send back to you when you're trying to access something in memory you shouldn't be doing.
+- But that's not what has actually happened because we overwrote somewhere we shouldn't, what happening is that the return address was half over written with these 41s
+###### stack situation where return address was half overwritten by 41s as shown in the photo
+![stack situation where return address was half overwritten by 41s as shown in the photo](https://github.com/anindameister/security/blob/master/snaps/64.PNG)
+- so is doesn't know what it is
+- so there's nothing in memory at 0xb7004141, and if there is, it doesn't belong to this process. It's not allowed, so it gets segmentation fault
+- so if we now, change that to 508("a" character number of times), we're going 2 bytes further along, which means we're now overwriting the entirety of our return address.
+!["a" character number of times is 508](https://github.com/anindameister/security/blob/master/snaps/65.PNG)
+!["a" character number of times is 508 and overwriting the entirety of our return address](https://github.com/anindameister/security/blob/master/snaps/66.PNG)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
