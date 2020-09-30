@@ -500,6 +500,7 @@ list
 - and what that means is, even if it moves a bit, it'll still work
 - just like having a slope almost
 ![No-Op sled](https://github.com/anindameister/security/blob/master/snaps/82.PNG)
+#### 2bcontd....
 
 
 
