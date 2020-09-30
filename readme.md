@@ -407,6 +407,10 @@ https://www.javatpoint.com/c-pointers#:~:text=The%20pointer%20in%20C%20language,
 list
 ```
 - and it shows the code for our function. So we can see that it just compiled our function
+- done from our computer
+![done from our computer](https://github.com/anindameister/security/blob/master/snaps/89.PNG)
+
+
 ![programme from gdb](https://github.com/anindameister/security/blob/master/snaps/54.PNG)
 - now, it knows this because the compiler included this information along with the executable
 - we can also show the machine code for this so we can say "disas main"(in the gdb) disassemble main and we can see the code for main
@@ -501,6 +505,22 @@ list
 - just like having a slope almost
 ![No-Op sled](https://github.com/anindameister/security/blob/master/snaps/82.PNG)
 #### 2bcontd....
+
+
+# gdb lesson
+
+- labtainer gdblesson
+![labtainer gdblesson](https://github.com/anindameister/security/blob/master/snaps/83.PNG)
+- Alternatively, you can write the C program through the Terminal in gedit as follows:
+
+$ gedit sampleProgram.c
+- compiled
+$ gcc [programName].c -o programName
+- run
+$ ./programName
+
+
+
 
 
 
