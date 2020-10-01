@@ -519,6 +519,91 @@ $ gcc [programName].c -o programName
 - run
 $ ./programName
 
+# shell
+
+- https://www.youtube.com/watch?time_continue=8&v=9y5TCwVU8iE&feature=emb_logo
+
+- kernel is the nucleus of a computer
+- kernel makes the communication happen between the software and hardware, possible
+- kernel is the innermost part of the OS, and the shell is a part of outermost part of the OS
+- a shell in Linux OS, takes input from user in the form of commands, processes them and gives the output
+- shell is an interface through which a user works on the program's commands and scripts
+
+![shell](https://github.com/anindameister/security/blob/master/snaps/91.PNG)
+
+-  a shell is accessed by a terminal which runs it
+- when you're in the terminal the shell issues a command prompt which is usually the dollar sign, where in you can type your input, which is then executed when you enter the enter key.
+-  So if we press PWD then the output is displayed in the terminal
+- the shell wraps around the delicate interior of an OS, protecting it from accidental damage, hence the name shell
+- there are two main shells in Linux, the first one in Bourne shell
+- the prompt for the Bourne shell is the dollar sign and it's derivative is the POSIX shell, also known as sh. Korn shell is also known as sh and Bourne Again Shell also known as bash which is the most popular of them all
+- The second one, which is another important shell in Linux is "The C" shell. The prompts for this shell is "%" and it's sub-categories are "C shell" aka csh, "Tops C SHell" aka tcsh
+
+#### what is shell scripting and it's uses
+
+- writing a series of command for the shell to execute is called shell scripting
+- it can combine the lengthy and repetative sequence of commands into a single and simple script which can be stored and executed anytime
+- this reduces the efforts required by the end-user
+
+#### steps to create a shell-script
+
+1. create a file with vi editor or any other text eidtor
+2. name the script file with extension .sh
+3. start the script with 
+```
+#! /bin/sh
+```
+4. write some code
+5. save the script file as filename.sh
+6. for executing the script type
+```
+bash filename.sh
+```
+- here  #! called shebang which directs the script to the interpretator location
+- creating a small script with VI editor"
+```
+vi samplescript.sh
+```
+- pressing "I" key in the keyboard, we enter the Insert mode in the editor
+- enter the command
+```
+#!/bin/sh
+ls
+```
+- esc to get out of insert mode
+- :wq and enter
+- running the command and checking the output
+![shellOutput](https://github.com/anindameister/security/blob/master/snaps/92.PNG)
+
+#### adding shell comments
+
+- #comment
+
+#### shell variables
+
+![shell variables](https://github.com/anindameister/security/blob/master/snaps/93.PNG)
+- read command
+![read command](https://github.com/anindameister/security/blob/master/snaps/95.PNG)
+- using the read command
+![using the read command](https://github.com/anindameister/security/blob/master/snaps/96.PNG)
+
+
+![shell variables' usage and seeing the output](https://github.com/anindameister/security/blob/master/snaps/94.PNG)
+
+#### summary shell
+- CLI- command line interface
+![summary](https://github.com/anindameister/security/blob/master/snaps/97.PNG)
+![summary](https://github.com/anindameister/security/blob/master/snaps/98.PNG)
+![summary](https://github.com/anindameister/security/blob/master/snaps/99.PNG)
+
+
+
+
+
+
+
+
+
 
 
 
