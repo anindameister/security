@@ -657,12 +657,72 @@ ls
 # assembly
 - two syntaxes assembly is usually written is:- at&t and intel. the instruction presentation is different here and we'll go for intel way of represntation
 - instruction format
+- if we wanna copy the value of the arg2 into the location of arg1
 ![instruction format](https://github.com/anindameister/security/blob/master/snaps/108.PNG)
 - mov in general
 ![mov in general](https://github.com/anindameister/security/blob/master/snaps/109.PNG)
-- if we wanna move 
+- if we wanna move a value located in the stack into the eax register and let's say that the stack variable is located at ebp-0x8
+```
+mov eax,ebp-0x8
+```
+then the above would copy the address of ebp-0x8 because that's basically the address on the stack or where our variable is located and not the value
+in order to copy the value, or where ebp-0x8 is pointing to , we got to do,
+```
+mov eax,[ebp-0x8]
+```
+introduce the square brackets(think of it as deference operator in C)
+- add 
+![add](https://github.com/anindameister/security/blob/master/snaps/110.PNG)
+- final value of eax is 15
+-sub
+![sub](https://github.com/anindameister/security/blob/master/snaps/111.PNG)
+- push
+- decrements the esp location, move it to lower address
+![push](https://github.com/anindameister/security/blob/master/snaps/112.PNG)
+- pop
+- takes register as argument
+- it moves the top element of the stack into the register specified by it's argument and then increment the stack pointer, thereby popping off the top element from the stack
+![pop](https://github.com/anindameister/security/blob/master/snaps/113.PNG)
+![pop](https://github.com/anindameister/security/blob/master/snaps/114.PNG)
+- lea(load effective address)
+- it places the adress specified by it's 2nd operand into the register specified by it's first operand
+- this is mainly used to obtain a pointer into memory region
+#### loops and if statements would come together to determine the order in which the instructions are executed
+###### eip register aka instruction pointer
+![eip](https://github.com/anindameister/security/blob/master/snaps/115.PNG)
+###### compare
+- similar to sub
+- except like sub where it stores the instruction in the first arg1
+- it would set a flag in the processor where it store values which are 0,<0,>0
+![compare](https://github.com/anindameister/security/blob/master/snaps/116.PNG)
+- compare instruction is always followed by jump instruction 
+- je(jump equal to, ne-not equal, g:greater than)
+![jump](https://github.com/anindameister/security/blob/master/snaps/117.PNG)
+```
+compare 1,3
+jump  if less than
+```
+- in the above scenario, jump would be taken
+- greater than, comes to picture instead of less than; then jump would not be taken and the eip would just move to the next instruction like below
 
+![jump](https://github.com/anindameister/security/blob/master/snaps/118.PNG)
+###### call
+- call instruction calls a function whether it is a user-defined or plt(printf or scanf)function.
+- this instruction takes one argument and is equivalent to push eip, jump argument
+- in order words, it'd push the return address of the function being called on to the stack and then move eip onto the first instruction of the function 
+![call](https://github.com/anindameister/security/blob/master/snaps/119.PNG)
+###### leave
+- the leave instruction is called at the end of every function
+- it eseentially destroys the current stack frame by setting the stack pointer to the base pointer and popping the base pointer off the top of the stack
+![leave](https://github.com/anindameister/security/blob/master/snaps/120.PNG)
+![leave](https://github.com/anindameister/security/blob/master/snaps/121.PNG)
 
+###### return
+- the return instruction alwaays follow the leave instruction
+- since the base pointer has already been popped off the stack, the return address of the function is now at the top of the stack
+- the return instruction would pop the return address off the top of the stack and then set the instruction pointer to that address
+![return](https://github.com/anindameister/security/blob/master/snaps/122.PNG)
+![return](https://github.com/anindameister/security/blob/master/snaps/123.PNG)
 
 
 
