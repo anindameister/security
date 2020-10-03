@@ -642,7 +642,28 @@ ls
 - all of the space b/w stack and the base pointer, makes our stack frame
 - this sequence of instruction is called the function prolog
 - the prolog is performed whenever a function is called
-- since our function's 1st local variable is 0, so th evalue 0 will be moved into the memory address which is 4 bytes below the base pointer
+- since our function's 1st local variable is 0, so th evalue 0 will be moved into the memory address which is 4 bytes below the base pointer; and that's because an integer is 4bytes
+- just a reminder, the value of the argument which is pushed initially on to the stack is at the highest memory address
+- now the local variable is at location ebp-4("-" is used because it is moving to the lower memory address)
+- again, the value of our argument is located 8bytes above the base pointer, which is not in the function stack frame
+- again, the function stack frame is b/w ebp and esp
+- since we have created a local variable, which is initialised with a value equal to the value of argument, hence the argument which is not residing yet into the function stack frame needds to be brought intot the function stack frame
+- there's a catch here, the values on the stack cannot be moved directly to another location on the stack
+- this is where our general purpose registers come in
+- the value of the argument to our function must be first copied into one of our general purpose registers, then the value is moved into the memory address 4bytes below our first variable(term "below" because we're going towards lower memory address") and 8bytes below the base pointer
+- now, both of our local variables have been initialised and can bbe accessed for later use
+![base and stack pointers' and return address existing below ebp intro](https://github.com/anindameister/security/blob/master/snaps/107.PNG)
+
+# assembly
+- two syntaxes assembly is usually written is:- at&t and intel. the instruction presentation is different here and we'll go for intel way of represntation
+- instruction format
+![instruction format](https://github.com/anindameister/security/blob/master/snaps/108.PNG)
+- mov in general
+![mov in general](https://github.com/anindameister/security/blob/master/snaps/109.PNG)
+- if we wanna move 
+
+
+
 
 
 
