@@ -597,6 +597,55 @@ ls
 ![summary](https://github.com/anindameister/security/blob/master/snaps/99.PNG)
 
 
+# x86 Assembly crash course
+
+- https://www.youtube.com/watch?v=75gBFiFtAb8&feature=youtu.be
+
+#### binary exploitation
+- process of taking compiled executables and making them do, what you want them to do.
+- to understand binary exploitation, we need to first understand what binary is and how it works on level, before exploiting it
+- hitting the compile option after running the c code, leads to generation of a text file with a special extension; which is read by a compiler which would inturn convert the code that have been written in form of C into a series of executable operations
+- each operation compires of sequence of bytes called the operation code, or opcode
+- reading opcodes, which the computer would be executing is almost impossible. Aseembly comes in here, which translates the language of the computer to human readable
+- let's understand the basic elemements of an executable before getting into assembly
+- every C program has 4 main components, heap,stack,registers, instructions
+- at this time, there are mainly 2 main architectures that dictates how a program is compiled and executed; 32 and 64bit
+- let's go over the 32 bit architecture and 32 bit assembly
+- heap in the memory is designed for the purpose of manual memory allocation
+- we just need to know for now, because heap is complicated; that whenever functions such as malloc and calloc are called as well as global or static variables are declared.
+- registers are essentially small storage areas in your processor. They can be used to store memory addresses and values or anything that can be represented by 8 bytes or less
+- in the x86 architecture, there are 6 general purpose registers: eax, ebx, ecx, edx,esi,editing
+- the above registers are generally used in as-needed basis
+- there are also 3 registers for specific purposes: ebp, esp, eip
+###### the stack
+- the stack is data-structure comprised of elements that are added or removed with 2 operations(Push,POP)
+- push adds element on top of the stack
+- and pop removes element from the top of the stack
+- each element on the stack is assigned to stack address, elements that are higher on the stack has a lower address. In other words, the stack grows towards lower memory addresses
+![stack address](https://github.com/anindameister/security/blob/master/snaps/103.PNG)
+- whenever a function is called, that function is setup with what is called a stack frame
+- all the local variables of that function would be stored in that functions' stack frame
+![stack frame](https://github.com/anindameister/security/blob/master/snaps/104.PNG)
+- ebp register, also known as base pointer register, comes into action. This ebp register contains the address of the base of the current stack frame
+- esp, stack pointer, contains the address of the top element of the current stack frame
+- all the space between these two registers, make up the  current stack frame of whatever function is currently being called.
+- all the stack addresses outside the current stack frame is considered to be junk by the compiler
+###### the C program
+![the C program](https://github.com/anindameister/security/blob/master/snaps/105.PNG)
+- first the value of the argument is pushed on to the stack, then the return address of the function is pushed on to the stack
+- the return address is simply the 4bytes address of the instruction that'll be executed, as soon as the function is gone out of scope
+- then the base pointer is pushed on to the stack
+- then the stack pointer is given the value of the base pointer as seen below
+![base and stack pointers' intro](https://github.com/anindameister/security/blob/master/snaps/106.PNG)
+- finally the stack pointer is decremented to make room for the local variables
+- depending on your compiler, the number of bytes that the stack pointer is decremented by , may vary
+- all of the space b/w stack and the base pointer, makes our stack frame
+- this sequence of instruction is called the function prolog
+- the prolog is performed whenever a function is called
+- since our function's 1st local variable is 0, so th evalue 0 will be moved into the memory address which is 4 bytes below the base pointer
+
+
+
 
 
 
