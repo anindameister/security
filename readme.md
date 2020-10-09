@@ -736,13 +736,40 @@ jump  if less than
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/127.PNG)
 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/127.jpeg)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/128.PNG)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/129.PNG)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/130.PNG)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/131.PNG)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/132.PNG)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/133.jpeg)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/134.jpeg)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/135.jpeg)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/136jpeg)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/137.jpeg)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/133.PNG) [[2]](#2). [[3]](#3).
+
 ## References
 <a id="1">[1]</a> 
 https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/shift-cipher
 
 
+<a id="2">[2]</a> 
+https://www.geeksforgeeks.org/vigenere-cipher/
 
-
+<a id="3">[3]</a> 
+https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 
 
 
