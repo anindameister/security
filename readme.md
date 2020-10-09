@@ -730,6 +730,17 @@ jump  if less than
 ![return](https://github.com/anindameister/security/blob/master/snaps/123.PNG)
 
 
+# cryptography [[1]](#1).
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/126.PNG)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/127.PNG)
+
+## References
+<a id="1">[1]</a> 
+https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/shift-cipher
+
+
 
 
 
