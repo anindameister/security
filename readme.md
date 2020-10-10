@@ -778,7 +778,7 @@ jump  if less than
 
 # South Indian Dude [[4]](#4). [[4]](#4).
 
-- video 1
+- video 1- network security basic concept
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/140.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/141.PNG) 
@@ -786,6 +786,18 @@ jump  if less than
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/143.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/144.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/145.PNG) 
+
+- NETWORK SECURITY - TYPES OF ATTACKS video2 [[5]](#5). [[5]](#5).
+
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/1146.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/1147.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/1148.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/1149.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/1150.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/1151.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/1152.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/1153.PNG) 
 
 ## References
 <a id="1">[1]</a> 
@@ -800,6 +812,9 @@ https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 
 <a id="4">[4]</a> 
 https://www.youtube.com/watch?v=VJelZrYc49c&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=1
+
+<a id="5">[5]</a> 
+https://www.youtube.com/watch?v=_zq4qTc9Jmg&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=2
 
 
 
