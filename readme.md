@@ -758,7 +758,7 @@ jump  if less than
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/137.jpeg)
 
-![cryptography](https://github.com/anindameister/security/blob/master/snaps/133.PNG) [[3]](#3). [[3]](#3).
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/133.PNG) [[3]](#3). 
 
 - types of cryptography
 
@@ -776,7 +776,7 @@ jump  if less than
  
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/139.PNG) 
 
-# South Indian Dude [[4]](#4). [[4]](#4).
+# South Indian Dude [[4]](#4). 
 
 - video 1- network security basic concept
 
@@ -787,7 +787,7 @@ jump  if less than
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/144.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/145.PNG) 
 
-- NETWORK SECURITY - TYPES OF ATTACKS video2 [[5]](#5). [[5]](#5).
+- NETWORK SECURITY - TYPES OF ATTACKS video2 [[5]](#5).
 
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/1146.PNG) 
@@ -798,6 +798,13 @@ jump  if less than
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/1151.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/1152.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/1153.PNG) 
+
+- NETWORK SECURITY - SECURITY SERVICES video 3 [[6]](#6). 
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/148.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/149.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/150.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/151.PNG) 
 
 ## References
 <a id="1">[1]</a> 
@@ -815,6 +822,9 @@ https://www.youtube.com/watch?v=VJelZrYc49c&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVk
 
 <a id="5">[5]</a> 
 https://www.youtube.com/watch?v=_zq4qTc9Jmg&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=2
+
+<a id="6">[6]</a> 
+https://www.youtube.com/watch?v=oUUmAQLea-A&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=3
 
 
 
