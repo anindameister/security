@@ -758,7 +758,7 @@ jump  if less than
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/137.jpeg)
 
-![cryptography](https://github.com/anindameister/security/blob/master/snaps/133.PNG) [[2]](#2). [[3]](#3).
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/133.PNG) [[3]](#3). [[3]](#3).
 
 - types of cryptography
 
@@ -770,11 +770,22 @@ jump  if less than
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/137.PNG) 
 
-- symmetric cryptography types
+- symmetric cryptography 
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/138.PNG) 
  
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/139.PNG) 
+
+# South Indian Dude [[4]](#4). [[4]](#4).
+
+- video 1
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/140.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/141.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/142.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/143.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/144.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/145.PNG) 
 
 ## References
 <a id="1">[1]</a> 
@@ -787,7 +798,8 @@ https://www.geeksforgeeks.org/vigenere-cipher/
 <a id="3">[3]</a> 
 https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 
-
+<a id="4">[4]</a> 
+https://www.youtube.com/watch?v=VJelZrYc49c&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=1
 
 
 
