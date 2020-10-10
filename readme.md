@@ -806,6 +806,13 @@ jump  if less than
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/150.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/151.PNG) 
 
+- NETWORK SECURITY - SUBSTITUTION TECHNIQUES video4 [[7]](#7). 
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/205.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/206.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/207.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/208.PNG) 
+
 ## References
 <a id="1">[1]</a> 
 https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/shift-cipher
@@ -825,6 +832,9 @@ https://www.youtube.com/watch?v=_zq4qTc9Jmg&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVk
 
 <a id="6">[6]</a> 
 https://www.youtube.com/watch?v=oUUmAQLea-A&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=3
+
+<a id="7">[7]</a> 
+https://www.youtube.com/watch?v=L2NAQbZeRXo&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=4
 
 
 
