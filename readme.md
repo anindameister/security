@@ -776,9 +776,9 @@ jump  if less than
  
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/139.PNG) 
 
-# South Indian Dude [[4]](#4). 
+# South Indian Dude  
 
-- video 1- network security basic concept
+- video 1- network security basic concept [[4]](#4).
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/140.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/141.PNG) 
@@ -812,6 +812,9 @@ jump  if less than
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/206.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/207.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/208.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/209.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/210.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/211.PNG) 
 
 ## References
 <a id="1">[1]</a> 
