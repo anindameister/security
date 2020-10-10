@@ -760,6 +760,22 @@ jump  if less than
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/133.PNG) [[2]](#2). [[3]](#3).
 
+- types of cryptography
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/134.PNG)
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/135.PNG) 
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/136.PNG) 
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/137.PNG) 
+
+- symmetric cryptography types
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/138.PNG) 
+ 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/139.PNG) 
+
 ## References
 <a id="1">[1]</a> 
 https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/shift-cipher
