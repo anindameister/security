@@ -816,6 +816,26 @@ jump  if less than
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/210.PNG) 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/211.PNG) 
 
+- NETWORK SECURITY - TRANSPOSITION TECHNIQUES video5 [[8]](#8). 
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/220.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/221.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/222.PNG) 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/223.PNG) 
+
+- NETWORK SECURITY - FEISTEL STRUCTURE video6 [[9]](#9). 
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/230.PNG) 
+
+- block cipher design principle
+1. block size: the size of plain text would be equal to that of th4e cipher text
+
+- the tick marks are used for increasing the security. Eg: increasing the number of rounds, increases the security
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/231.PNG) 
+
+
+
 ## References
 <a id="1">[1]</a> 
 https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/shift-cipher
@@ -838,6 +858,12 @@ https://www.youtube.com/watch?v=oUUmAQLea-A&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVk
 
 <a id="7">[7]</a> 
 https://www.youtube.com/watch?v=L2NAQbZeRXo&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=4
+
+<a id="8">[8]</a> 
+https://www.youtube.com/watch?v=eKMmrDy3LCQ&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=5
+
+<a id="9">[9]</a> 
+https://www.youtube.com/watch?v=drI2shandyk&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=6
 
 
 
