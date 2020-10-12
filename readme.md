@@ -835,6 +835,10 @@ jump  if less than
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/231.PNG) 
 
 
+- NETWORK SECURITY- AES (ADVANCED ENCRYPTION STANDARD) Algorithm
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/250.PNG) 
+
 
 ## References
 <a id="1">[1]</a> 
