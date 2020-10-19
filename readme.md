@@ -839,6 +839,148 @@ jump  if less than
 
 ![cryptography](https://github.com/anindameister/security/blob/master/snaps/250.PNG) 
 
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/251.PNG) 
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/252.PNG) 
+
+###### block diagram
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/253.PNG) 
+
+![cryptography](https://github.com/anindameister/security/blob/master/snaps/254.PNG) 
+
+# iptables [[10]](#10). 
+
+- powerful linux tool
+- it is used to create quick and powerful firewall for your system
+- it provides an interface to work with packet filtering framework of linux kernel called netfilter
+
+![iptables](https://github.com/anindameister/security/blob/master/snaps/1154.PNG)
+
+- in simple terms, it's a powerful tool to manage network packets, coming to and going out of your system
+- so with iptables you can block, access or take other actions with network traffics based on different user defined conditions
+
+![iptables](https://github.com/anindameister/security/blob/master/snaps/1155.PNG)
+
+- 3 important terms: tables, chains, rules
+- 5 tables, 3 are main and each has different roles
+#### tables
+- 1. filter table: main table, which is also default meaning that when nothing is mentioned in regards to table the rule will apply for filter table
+
+![iptables,filter table](https://github.com/anindameister/security/blob/master/snaps/1156.PNG)
+
+- as the name suggests the role of this table is of filter packets that's making decision whether to let a packet continue tot he intended destination or to deny it's request
+- this is the table which provides majority of functions of iptables
+- 2. NAT table
+
+![iptables,NAT table](https://github.com/anindameister/security/blob/master/snaps/1157.PNG)
+
+- as the name suggests, it is used to provide network address translation rules. The rule of this table would determine whether to modify or how to modify the packet source or destination addresses in order to route the packet in NAT setup where direct access is not possible
+
+- 3. Mangle table
+
+![iptables,NAT table](https://github.com/anindameister/security/blob/master/snaps/1158.PNG)
+
+- this table is used to alter the ip headers of the packet
+- eg: of the alteration of ip headers, we can adjust (TTL)time to live of the packet; either lengthening or shortening the valid network hops that the packet can sustain
+
+- 4. RAw table
+
+![iptables,NAT table](https://github.com/anindameister/security/blob/master/snaps/1159.PNG)
+
+- the raw table is used for connection tracking
+- it provides a mechanism for marking packets, to view packets as a part of ongoing connections or session
+
+- 5. security table
+
+- the security table is used to set internal SELinux, security context marks on packets which will affect how SELinux or other system that can interpret SELinux security context handle these packets
+
+#### chains
+
+- chains are the routes or points to packet where you can apply rules
+- there are 5 chains in iptables
+- prerouting, input,forward,output, post routing
+
+![iptables,chains](https://github.com/anindameister/security/blob/master/snaps/1160.PNG
+
+- all chains are not available for all tables.
+- each chain gives you option to take action on the packet and that particular point in the packet route.
+
+- 1. prerouting chain is applied to any incoming packet very soon after entering the network stack
+
+![iptables,prerouting chain](https://github.com/anindameister/security/blob/master/snaps/1161.PNG)
+
+- this chain is processed before any routing decision have been made regarding where to send the packet
+
+- 2.  input chain is a point, post prerouting, when packet enters a system
+
+![iptables,prerouting chain](https://github.com/anindameister/security/blob/master/snaps/1162.PNG)
+
+- 3. forward chain is applied to a packet that is forwarded through your system
+- 4. output chain is applied to a packet originated from your system and going out
+- 5. post-routing is oppsoite of pre-routing, this is applied to outgoing or forwarded traffic after routing decision has taken place and just before packet has been put on the wire
+
+![iptables,chain](https://github.com/anindameister/security/blob/master/snaps/1163.PNG)
+
+- now all chains are not available for all tables
+- so we got to know which chain available for which table
+- we should also know the order in which chain is called for each table and also chain traversal order
+
+![iptables,order of chain](https://github.com/anindameister/security/blob/master/snaps/1164.PNG)
+
+- the above figure shows the order in which chain is called for different table and also the avilability of chain for each table
+- so for filter table according to the figure, we have three chains i.e. input, forward and output
+
+#### chain traversal order
+
+![iptables,chain traversal order](https://github.com/anindameister/security/blob/master/snaps/1165.PNG)
+
+- chain traversal order which is actually the path, how packet traverses
+- so for incoming packets to the local system , the traversal order is pre-routing and then input
+- the rest is according to the above snap
+
+#### iptable rules
+
+![iptables,rules](https://github.com/anindameister/security/blob/master/snaps/1166.PNG)
+
+- as each chain is called, the packet will be checked against each rule within the chain, in order
+- if the packet, doesn't match then the next rule in the chain is examined
+- if it does match then, the next rule is specified by the value of the target
+- now each rule has two component: matching component and target component.
+
+![iptables,rules](https://github.com/anindameister/security/blob/master/snaps/1167.PNG)
+
+- macthing component is differnt conditions available to define rules
+
+![iptables,rules](https://github.com/anindameister/security/blob/master/snaps/1168.PNG)
+
+- so we can match by protocol type, destination or source address, destination or source port, input or output interface, headers etc..
+- these can be combined to create really complex rule sets
+
+- next is the target component 
+- the target componet is the action that's triggered when a packet meets the matching criteria of a rule
+- now there are two types of target, terminating and non-terminating target
+
+![iptables,rules](https://github.com/anindameister/security/blob/master/snaps/1169.PNG)
+
+
+- terminating target is the actions which end the further traversal in that particular chain. Eg: accept.drop,queue, reject, return, or mved to any user-defined chain
+
+- non-terminating target, you perform an action and then continue evaluation within the chain
+
+![iptables,rules](https://github.com/anindameister/security/blob/master/snaps/1170.PNG)
+
+
+- note: not all action is available for every chain and table, hence the table and chain types dictates the action available
+
+![iptables,rules](https://github.com/anindameister/security/blob/master/snaps/1171.PNG)
+
+
+
+
+
+
+
 
 ## References
 <a id="1">[1]</a> 
@@ -868,6 +1010,9 @@ https://www.youtube.com/watch?v=eKMmrDy3LCQ&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVk
 
 <a id="9">[9]</a> 
 https://www.youtube.com/watch?v=drI2shandyk&list=PLLOxZwkBK52Ch0y2lLtfepy4Lt_SVkwo3&index=6
+
+<a id="10">[10]</a> 
+https://www.youtube.com/watch?v=vbhr4csDeI4&t=13s
 
 
 
