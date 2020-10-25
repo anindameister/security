@@ -975,6 +975,22 @@ jump  if less than
 
 ![iptables,rules](https://github.com/anindameister/security/blob/master/snaps/1171.PNG)
 
+# wireshark
+
+- wireshark is a tool to check what is going on in a network. Eg: seeing passwords and other info, on a network
+- wireshark is a graphical interface
+- tshark is the corresponding commandline interface
+- npcap or winpcap to capture live network data. This is used by Wireshark.
+- usbpcap is used to capture usbtraffic
+- npcap lookback dapter gets installed in windows with wireshark installation. this nocap loopback can be found in network connection.
+
+#### within wireshark
+
+- EIGRP is a routing protocol
+- OSPF is another routing protocol
+- there'll be a lot of traffic in the network connected to windows, but we'll just filter to only see certain traffic types, in our case telnet
+- so we'll do a telnet to a device in our network
+
 
 
 
