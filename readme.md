@@ -991,6 +991,35 @@ jump  if less than
 - there'll be a lot of traffic in the network connected to windows, but we'll just filter to only see certain traffic types, in our case telnet
 - so we'll do a telnet to a device in our network
 
+# Intrusion Detection and Prevention Systems (IDS/ IPS) | Security Basics [[12]](#12).
+
+- IDS detects
+- IPS prevents
+- more details in slide, very basic in the video. 
+
+#### IDS bypassing 
+- video 1 for 3Nov,2020; slide 39
+
+# What is SIEM? Security Information & Event Management Explained [[13]](#13).
+
+# Encryption of communications 
+
+#### IPSEC 
+- micronuggets, no technical term has been used as per slide [[15]](#15).
+- technical terms used but requires patience to understand [[14]](#14).
+
+![IPSEC](https://github.com/anindameister/security/blob/master/snaps/155.PNG)
+
+- SSL is a cryptographic protocol that uses explicit connections to establish secure communication between web server and client. 
+- TLS is also a cryptographic protocol that provides secure communication between web server and client via implicit connections. 
+- It's the successor of SSL protocol.
+
+# ssh [[16]](#16).
+
+#### SSL, TLS, HTTP, HTTPS Explained [[17]](#17).
+
+
+
 
 
 
@@ -1033,6 +1062,23 @@ https://www.youtube.com/watch?v=vbhr4csDeI4&t=13s
 <a id="11">[11]</a> 
 https://www.youtube.com/watch?v=4_7A8Ikp5Cc
 
+<a id="12">[12]</a> 
+https://www.youtube.com/watch?v=rvKQtRklwQ4
+
+<a id="13">[13]</a> 
+https://www.youtube.com/watch?v=GbFtSDnPZBQ
+
+<a id="14">[14]</a> 
+https://www.youtube.com/watch?v=tuDVWQOG0C0
+
+<a id="15">[15]</a> 
+https://www.youtube.com/watch?v=CuxyZiSCSfc
+
+<a id="16">[16]</a> 
+https://www.youtube.com/watch?v=qWKK_PNHnnA
+
+<a id="17">[17]</a> 
+youtube.com/watch?v=hExRDVZHhig
 
 
 
