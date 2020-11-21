@@ -21,6 +21,30 @@
 
 ![Keys](https://github.com/anindameister/security/blob/master/snaps/268.PNG)
 
+#### rsa
+
+- basic public and private key
+
+![Keys](https://github.com/anindameister/security/blob/master/snaps/269.PNG)
+
+- calculating public and private key
+
+![Keys](https://github.com/anindameister/security/blob/master/snaps/270.PNG)
+
+- visualising in a practical scenario
+
+![Keys](https://github.com/anindameister/security/blob/master/snaps/271.PNG)
+
+#### three questions as below came up, which led to the origin of certificate
+
+![Keys](https://github.com/anindameister/security/blob/master/snaps/272.PNG)
+
+- question 1: so Philip Jallion is working in ecoleD'mines now and someone(an ex student) sends an email to him. Considering that the email account was never deleted, so the email is processed and would be attempted to be downloaded to Philip's Jallion computer which has been put on charge-connected to network and left alone forever. This downloading would happen because the publicKey is being handled by the Linux operating system and not by the user.
+- here's one thing that Professor mentioned, is that windows dont trust public keys
+- question 2. The owner couldn't be trusted because based on the answer to Q1 we understand that owner has left. So the user who's available or not, cannot be trusted any longer.
+- Q3. yeah valid or not , but all the above questions give birth to certificate.
+
+
 
 ## References
 <a id="1">[1]</a> 
