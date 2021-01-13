@@ -85,6 +85,14 @@ learn and what protocols’ properties cannot be respected.
     - Identification protection: Covid 19 patient's ,thereby at-risk user's identity can be hidden in proximitytracing system.
 
 
+
+
+- Regarding the ROBERT’s authentication and access control, 
+    - it is a mandatory access control, in which the access right will be set up by the central authority which will set a multiple level regards security. This is considered a high security model where it is used in sensitive organisations such as military environments. Also one of these model advantages is that classifications are assigned to the system resources and OS in which allow or deny access to specific resources based on the clearance of information security.
+- While DP-3T’s access control model 
+    - is a discretionary access control, 
+    - because of DP-3T use decentralize protocol therefore it was the appropriate access control model. Where the users of the system will only themself allow to know the information collected on there device. In this model the owner of the system who will set the policies and define the authorized people to access the data or resource. In DP-3T the data only will be sent to the back-end server if the user wants (the user responsibility).
+
 ## References
 <a id="1">[1]</a> 
 https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html
