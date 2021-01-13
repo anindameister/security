@@ -55,6 +55,36 @@ The contact tracking app will work on both BLE and location tracking. The locati
     - Data: All the data of the user would be in the device itself. The cypher text version of the data would be stored in the central server. Absolute efforts would be given to prevent any data-leak or eaves-dropping by any un-authorised personnel or government bodies.Moreover, the data would be also deleted from the user's phone and the central server at the end of 30 days, and it would be made mandatory to fill in the same details as before by the user. 
     - Trust and Privacy: This app would not be able to gather any information from other apps. However, text message services can be accessed only with user permission.
 
+
+## In the two protocols, a server is required at exposure verification and infection declaration.
+- Imagine you are the owner (administrator) of the server and be able to observe all communications
+with your server at any time.
+- Imagine you are a telcom operator and be able to to observe all communications, you are also able
+to localize cell phone.
+- in these two situations, explain how the flows could be exploited, what the attacker could
+learn and what protocols’ properties cannot be respected.
+
+## Answer
+- Location traceability. The decentralized design limits the potential for location tracking to users who have received a positive diagnosis and for the course of the contagious period.In centralised systems in which keys are generated on the server, access to server-sidekeys  (e.g.,  the  backend  itself  or  law  enforcement)  enables  linking  ephemeral  EphIDs to the corresponding permanent app identifier.   This enables tracing/identifying people based  on  EphIDs  observed  in  the  past,  as  well  as  tracing  peoples’  future  movements.When keys are generated on the phone and not used directly as EphIDs.
+
+    - Location data: The decentralized design prevents location tracking of Covid-19 postive patients during their contagious period.In centralised systems, keys are genenerated on the server. Access to these server side keys, enables linking EphIDs to app indentifier which in turn facilitates the user identification and enables tracking their further movements.
+
+- COVID-19 positive status.   The centralised and decentralised proximity tracingsystems share the inherent privacy limitation that they can be exploited by a tech-savvyuser to reveal which individuals in their contact list might be infected. However, the cen-tralised designs hide when and how often the user was in contact with a COVID-positivepatient.  As a result,  tech-savvy attackers cannot benefit from linking between EphIDsand timing information to amplify their attack.   Instead,  they need to rely on multipleaccounts. Depending on whether the centralized designs deploy dummy traffic correctly,network eavesdroppers might still learn the COVID-19 status of users of the system.
+
+    - COVID-19 positive: The centralised and decentralised systems have the same privacy limitation which could be exploited to get the infected user list. The centralised system hides Covid-19 positive user's identity well, thus EphIDs cannot be used to pin-point Covid positive user. However, network eaves- dropping and centralised system's dummy traffic bypassing can be used.
+
+- The type of data being collected on Bluetooth connections could reveal informa-tion about families, societies, and communities.
+
+    - data collection: Bluetooth data could reveal family,community information.
+
+- Fake exposure events. Triggering false alerts is easy in all centralised designs andcan be done retroactively by any tech-savvy COVID-19 positive user.
+
+    - Fake alerts: In centralised system, a user can trigger fake Covid alert
+- Suppressing at-risk contacts.  Hiding at-risk contacts is possible in any proximitytracing system.
+
+    - Identification protection: Covid 19 patient's ,thereby at-risk user's identity can be hidden in proximitytracing system.
+
+
 ## References
 <a id="1">[1]</a> 
 https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html
